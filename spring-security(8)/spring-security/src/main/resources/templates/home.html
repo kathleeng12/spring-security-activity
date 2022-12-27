@@ -7,10 +7,12 @@
     <title>Title</title>
 </head>
 <body>
+
     This  is Home page!
     <br>
     <div class="w3-monospace" sec:authorize="hasRole('ROLE_MANAGER')">Text visible to manager.</div>
-    <div class="w3-monospace" sec:authorize="hasRole('ROLE_EMPLOYEE')">Text visible to employee.</div>
+    <div class="w3-monospace" sec:authorize="hasRole('ROLE_OWNER')">Text visible to owner.</div>
+    <div class="w3-monospace" sec:authorize="hasRole('ROLE_CUSTOMER')">Text visible to customer.</div>
     <div class="w3-monospace" sec:authorize="hasRole('ROLE_ADMIN')">Text visible to admin.</div>
     <br>
     <br>
@@ -24,8 +26,6 @@
 <br>
 <form th:action = "@{/logout}" method="post">
     <input type="submit" value="Log Out"/>
-
-
 </form>
 </body>
 </html>
