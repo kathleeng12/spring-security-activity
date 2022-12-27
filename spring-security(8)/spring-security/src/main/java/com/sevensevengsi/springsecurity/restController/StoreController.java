@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 public class StoreController {
-    @Autowired
-    private StoreRepository storeRepo;
-
-    @Autowired
-    private OwnerRepository ownerRepo;
-
-    	@GetMapping("/store")
-	public ResponseEntity<List<Store>> getData (@RequestParam Long owner) {
-		return new ResponseEntity<List<Store>>(storeRepo.findByOwnerId(owner), HttpStatus.OK);
-	}
+//    @Autowired
+//    private StoreRepository storeRepo;
+//
+//    @Autowired
+//    private OwnerRepository ownerRepo;
+//
+//    	@GetMapping("/store")
+//	public ResponseEntity<List<Store>> getData (@RequestParam Long owner) {
+//		return new ResponseEntity<List<Store>>(storeRepo.findByOwnerId(owner), HttpStatus.OK);
+//	}
 }
