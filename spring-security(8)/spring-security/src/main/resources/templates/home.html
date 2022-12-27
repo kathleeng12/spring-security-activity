@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    This  is Home page!
+    <br>
+    <div class="w3-monospace" sec:authorize="hasRole('ROLE_MANAGER')">Text visible to manager.</div>
+    <div class="w3-monospace" sec:authorize="hasRole('ROLE_EMPLOYEE')">Text visible to employee.</div>
+    <div class="w3-monospace" sec:authorize="hasRole('ROLE_ADMIN')">Text visible to admin.</div>
+    <br>
+    <br>
+    <div class="w3-monospace"></div>
+    Authenticated username:
+    <span sec:authentication="name"></span> <br>
+    Authenticated user roles:
+    <span sec:authentication="principal.authorities"></span>
+    </div>
+    <br>
+<br>
+<form th:action = "@{/logout}" method="post">
+    <input type="submit" value="Log Out"/>
+
+
+</form>
+</body>
+</html>
