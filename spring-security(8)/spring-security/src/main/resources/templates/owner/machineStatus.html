@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+<a th:href ="@{/}"> Go to Homepage</a>
+<span style="align-self: center">Machine Status</span>
+<br>
+<div>
+  <table style="width:100%">
+    <thead class="thead-dark">
+    <tr>
+      <th>ID</th>
+      <th>Description</th>
+
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr th:each="machineStatus: ${machineStatus}">
+      <td th:text="${machineStatus.id}">ID</td>
+      <td th:text="${machineStatus.discription}">Description</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

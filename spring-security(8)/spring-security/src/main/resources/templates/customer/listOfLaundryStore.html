@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+<a th:href ="@{/}"> Go to Homepage</a>
+<span style="align-self: center">List of Laundry Store</span>
+<br>
+<div>
+  <table style="width:100%">
+    <thead class="thead-dark">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Owner ID</th>
+      <th>Store Manager ID</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr th:each="store: ${store}">
+      <td th:text="${store.id}">ID</td>
+      <td th:text="${store.name}">Name</td>
+      <td th:text="${store.owner_id}">Owner ID</td>
+      <td th:text="${store.storeManager_id}">Store Manager ID</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

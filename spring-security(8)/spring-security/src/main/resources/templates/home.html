@@ -5,6 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <ul>
+        <li><a th:href ="@{/}">Home</a></li>
+        <li><a th:href ="@{/list/listManager}">List of Manager</a></li>
+        <li><a th:href ="@{/list/listOfLaundryRequest}">List of Laundry Store</a></li>
+        <li><a th:href ="@{/list/listOfLaundryStore}">List of Laundry Request</a></li>
+        <li><a th:href ="@{/list/machineStatus}">Machine Status</a></li>
+
+    </ul>
 </head>
 <body>
 
@@ -20,7 +29,7 @@
     Authenticated username:
     <span sec:authentication="name"></span> <br>
     Authenticated user roles:
-    <span sec:authentication="principal.authorities"></span>
+<!--    <span sec:authentication="principal.authorities"></span>-->
     </div>
     <br>
 <br>
